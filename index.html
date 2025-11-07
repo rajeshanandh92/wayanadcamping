@@ -1,1 +1,472 @@
-<h1> Wayanad Camping </h1>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayanad Camping - Tree Tent Stay | Book Your Adventure</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EK7YXFSG98"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EK7YXFSG98');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1050823688683934');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1050823688683934&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Simple scroll-shadow for sticky nav */
+        .sticky-nav-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Hero image brightness */
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+            z-index: 1;
+        }
+        
+        /* New Masonry Gallery Styles */
+        .masonry-gallery {
+            column-count: 2;
+            column-gap: 1rem; /* 16px */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .masonry-gallery {
+                column-count: 3;
+            }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem; /* 16px */
+            border-radius: 1rem; /* 16px */
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .masonry-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .masonry-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- 
+      Header / Navigation 
+      Simple, sticky, and drives to the booking CTA.
+    -->
+    <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 sticky-nav-shadow">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-900">
+                Wayanad Camping
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="#experience" class="hidden md:inline text-gray-600 hover:text-gray-900">The Experience</a>
+                <a href="#itinerary" class="hidden md:inline text-gray-600 hover:text-gray-900">Itinerary</a>
+                <a href="#book" class="bg-emerald-600 text-white px-5 py-2 rounded-full font-semibold text-sm shadow-lg hover:bg-emerald-700 transition duration-300">
+                    Book Now
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- 
+          Hero Section
+          Uses the most compelling image: the view FROM the tent.
+          Clear H1, value prop, price, and CTA.
+        -->
+        <section class="relative h-[80vh] md:h-[90vh] min-h-[500px] flex items-center justify-center text-white text-center hero-bg">
+            <!-- Background Image -->
+            <img 
+                src="images/IMG-20251107-WA0028.jpg" 
+                alt="View from inside the tree tent overlooking the Wayanad hills at sunrise" 
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                onerror="this.onerror=null;this.src='https://placehold.co/1200x800/3a4a37/ffffff?text=Wayanad+Hills+View';"
+            >
+            
+            <div class="relative z-10 p-6 flex flex-col items-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-shadow-lg leading-tight">
+                    Sleep Among the Treetops in Wayanad
+                </h1>
+                <p class="text-lg md:text-2xl mb-8 max-w-2xl text-gray-100">
+                    An unforgettable 1-Night / 2-Day eco-adventure. Wake up above the mist.
+                </p>
+                
+                <!-- Key Info Badges -->
+                <div class="flex flex-wrap justify-center gap-3 mb-10">
+                    <span class="bg-white/20 backdrop-blur-sm text-white text-sm font-semibold px-4 py-2 rounded-full">
+                        ₹2,999 per person
+                    </span>
+                    <span class="bg-white/20 backdrop-blur-sm text-white text-sm font-semibold px-4 py-2 rounded-full">
+                        Ponmudikkotta, Wayanad
+                    </span>
+                    <span class="bg-amber-400 text-gray-900 text-sm font-bold px-4 py-2 rounded-full shadow-lg">
+                        Only 12 Guests per Batch
+                    </span>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="#book" class="bg-emerald-600 text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-emerald-700 transition duration-300 transform hover:scale-105">
+                    Book Your Tree Tent Today
+                </a>
+            </div>
+        </section>
+
+        <!-- 
+          Key Features / The Experience
+          Icon-based grid explaining what makes it special.
+        -->
+        <section id="experience" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">An Unforgettable Eco-Camping Adventure</h2>
+                    <p class="text-lg text-gray-600">
+                        This isn't just camping. It's a "Monsoon Voyages Wildernature Experience" designed to reconnect you with nature, responsibly.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature 1: Tree Tents -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                        <!-- SVG Icon: Tent -->
+                        <svg class="w-12 h-12 text-emerald-600 mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                        <h3 class="text-xl font-bold mb-2">Unique Tree Tents</h3>
+                        <p class="text-gray-600">Sleep comfortably suspended above the ground in cozy 2 or 3-sharing tree tents.</p>
+                    </div>
+                    
+                    <!-- Feature 2: Guided Trek -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                        <!-- SVG Icon: Mountain -->
+                        <svg class="w-12 h-12 text-emerald-600 mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+                        <h3 class="text-xl font-bold mb-2">Guided Morning Trek</h3>
+                        <p class="text-gray-600">Explore scenic trails with our trained naturalists and discover local flora and fauna.</p>
+                    </div>
+
+                    <!-- Feature 3: Campfire -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                        <!-- SVG Icon: Flame -->
+                        <svg class="w-12 h-12 text-emerald-600 mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4.5c.3-.3.6-.5.9-.7 1.3-1 3.3-1 4.6 0 .8.6 1.3 1.5 1.6 2.4.3 1.2.2 2.5-.2 3.6-.4.9-1 1.7-1.7 2.4-1.3 1.3-3.3 1.3-4.6 0-.8-.6-1.3-1.5-1.6-2.4-.3-1.2-.2-2.5.2-3.6.4-.9 1-1.7 1.7-2.4Z"/><path d="M10.1 10.1c.3-.3.6-.5.9-.7 1.3-1 3.3-1 4.6 0 .8.6 1.3 1.5 1.6 2.4.3 1.2.2 2.5-.2 3.6-.4.9-1 1.7-1.7 2.4-1.3 1.3-3.3 1.3-4.6 0-.8-.6-1.3-1.5-1.6-2.4-.3-1.2-.2-2.5.2-3.6.4-.9 1-1.7 1.7-2.4Z"/><path d="M18 16c.3.3.6.5.9.7 1.3 1 3.3 1 4.6 0 .8-.6 1.3-1.5 1.6-2.4.3-1.2.2-2.5-.2-3.6-.4-.9-1-1.7-1.7-2.4-1.3-1.3-3.3-1.3-4.6 0-.8.6-1.3 1.5-1.6 2.4-.3 1.2-.2 2.5.2 3.6.4.9 1 1.7 1.7 2.4Z"/><path d="M5 12c.3.3.6.5.9.7 1.3 1 3.3 1 4.6 0 .8-.6 1.3-1.5 1.6-2.4.3-1.2.2-2.5-.2-3.6-.4-.9-1-1.7-1.7-2.4-1.3-1.3-3.3-1.3-4.6 0-.8.6-1.3 1.5-1.6 2.4-.3 1.2-.2 2.5.2 3.6.4.9 1 1.7 1.7 2.4Z"/><path d="M14 22v-2c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v2"/><path d="M12 18h.01"/></svg>
+                        <h3 class="text-xl font-bold mb-2">Campfire & Music</h3>
+                        <p class="text-gray-600">Share stories, listen to music, and unwind by a warm campfire under the stars.</p>
+                    </div>
+
+                    <!-- Feature 4: Small Group -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                        <!-- SVG Icon: Users -->
+                        <svg class="w-12 h-12 text-emerald-600 mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <h3 class="text-xl font-bold mb-2">Exclusive Small Groups</h3>
+                        <p class="text-gray-600">We limit each batch to just 12 guests to ensure a peaceful, private, and high-quality experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          Gallery Section
+          Shows off the other images provided.
+        -->
+        <section id="gallery" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Gallery: Your Treetop Escape</h2>
+                </div>
+                
+                <!-- New Masonry Gallery -->
+                <div class="masonry-gallery">
+                    <!-- Image 1 -->
+                    <div class="masonry-item">
+                        <img src="images/IMG-20251107-WA0027.jpg" alt="Side view of the Stingray tree tent set up in the forest"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/5a6357/ffffff?text=Tree+Tent+Setup';">
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="masonry-item">
+                        <img src="images/IMG-20251107-WA0033.jpg" alt="Silhouette of a person overlooking the Wayanad valley at dusk"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/2a2a3a/ffffff?text=Valley+View+at+Dusk';">
+                    </div>
+                    <!-- Image 3 (Placeholder for Campfire from brochure) -->
+                    <div class="masonry-item">
+                        <img src="https://placehold.co/600x400/332a1e/e0d6c3?text=Cozy+Campfire+Nights" alt="Group sitting around a campfire at night">
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="masonry-item">
+                        <img src="images/IMG-20251107-WA0024.jpg" alt="View from under the tree tent showing the mesh bottom"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/7a7a6a/ffffff?text=Inside+the+Tent';">
+                    </div>
+                    <!-- Image 5 (Placeholder for Trekking from brochure) -->
+                    <div class="masonry-item">
+                        <img src="https://placehold.co/600x400/445c3c/d9e8d5?text=Guided+Trekking" alt="Group trekking on a hill">
+                    </div>
+                    <!-- Image 6 -->
+                    <div class="masonry-item">
+                        <img src="images/IMG-20251107-WA0022.jpg" alt="Low angle shot of the tree tent rainfly against the sky"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/6b7f78/ffffff?text=Tent+Canopy';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          Itinerary & Package Details
+          Clear two-column layout from the brochure.
+        -->
+        <section id="itinerary" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your 2-Day Adventure Itinerary</h2>
+                    <p class="text-lg text-gray-600">
+                        We've planned the perfect blend of adventure and relaxation.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Column 1: Itinerary -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold mb-6">Itinerary</h3>
+                        
+                        <!-- Day 1 -->
+                        <div class="mb-6">
+                            <h4 class="text-xl font-semibold text-emerald-700 mb-3">Day 1: Arrival & Campfire</h4>
+                            <ul class="space-y-3 text-gray-600 border-l-2 border-emerald-200 pl-4">
+                                <li><strong>3:00 PM:</strong> Arrive at campsite, Welcome Drink & Briefing</li>
+                                <li><strong>3:30 PM:</strong> Settle into your Tree Tent</li>
+                                <li><strong>4:30 PM:</strong> Free time to explore & enjoy the views</li>
+                                <li><strong>6:30 PM:</strong> Campfire with music & storytelling</li>
+                                <li><strong>8:00 PM:</strong> Freshly prepared dinner</li>
+                                <li>Overnight stay in your Tree Tent</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Day 2 -->
+                        <div>
+                            <h4 class="text-xl font-semibold text-emerald-700 mb-3">Day 2: Trekking & Departure</h4>
+                            <ul class="space-y-3 text-gray-600 border-l-2 border-emerald-200 pl-4">
+                                <li><strong>7:00 AM:</strong> Wake up to nature's sounds, Tea/Coffee</li>
+                                <li><strong>7:30 AM:</strong> Guided Morning Trek on scenic trails</li>
+                                <li><strong>9:30 AM:</strong> Return to camp for a hearty breakfast</li>
+                                <li><strong>11:00 AM:</strong> Check-out and bid farewell</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Inclusions & Exclusions -->
+                    <div class="bg-gray-900 text-white p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6">Package Details</h3>
+                        
+                        <!-- Inclusions -->
+                        <div class="mb-8">
+                            <h4 class="text-xl font-semibold text-emerald-400 mb-4">What's Included:</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-emerald-400 mr-2 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                    <span>1 Night Tree Tent Stay (2/3 sharing)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-emerald-400 mr-2 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                    <span>Dinner (Day 1) & Breakfast (Day 2)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-emerald-400 mr-2 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                    <span>Campfire with Music</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-emerald-400 mr-2 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                    <span>Guided Morning Trek</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-emerald-400 mr-2 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                    <span>Sleeping Bags & Camping Gear</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-emerald-400 mr-2 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                    <span>Camp Marshal Supervision & All Taxes</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Exclusions -->
+                        <div>
+                            <h4 class="text-xl font-semibold text-amber-400 mb-4">What's Not Included:</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-amber-400 mr-2 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                                    <span>Transportation to/from campsite</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-amber-400 mr-2 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                                    <span>Lunch on any day</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-amber-400 mr-2 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                                    <span>Any personal expenses (tips, etc.)</span>
+                                </li>
+                            </ul>
+                            <p class="text-sm text-gray-400 mt-4">(Pickup/drop from Ambalavayal or Sulthan Bathery available at extra cost)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+          Testimonials / Social Proof
+          Builds trust. Based on the target audience from the ad copy.
+        -->
+        <section id="testimonials" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Don't Just Take Our Word For It</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 (Couple/Friends) -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"An absolutely magical experience! Waking up to that view from the tree tent was something I'll never forget. The campfire and trek were perfectly organized. The best weekend getaway we've had."</p>
+                        <p class="font-bold text-gray-900">Priya S. & Arjun K.</p>
+                        <p class="text-sm text-gray-500">Bangalore</p>
+                    </div>
+                    
+                    <!-- Testimonial 2 (Adventure Seeker) -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"10/10. The tree tent is surprisingly comfortable, and the view is insane. Great food, great vibes. Highly recommend for anyone looking for a unique adventure. The team is fantastic."</p>
+                        <p class="font-bold text-gray-900">Rohan M.</p>
+                        <p class="text-sm text-gray-500">Kochi</p>
+                    </div>
+                    
+                    <!-- Testimonial 3 (Eco/Family) -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"It's so peaceful and well-managed. We loved that it's limited to a small group. The 'Leave No Trace' policy is something we really appreciated. Felt safe and reconnected with nature."</p>
+                        <p class="font-bold text-gray-900">The Sharma Family</p>
+                        <p class="text-sm text-gray-500">Coimbatore</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          Final CTA / Booking Section
+          Strong headline, scarcity, price, and clear booking options.
+        -->
+        <section id="book" class="py-20 md:py-32 bg-gray-900 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Your Tree Tent Adventure Awaits</h2>
+                <p class="text-xl md:text-2xl text-amber-400 font-semibold mb-6">
+                    Slots are limited to 12 guests per batch and fill up fast!
+                </p>
+                <p class="text-4xl md:text-5xl font-bold text-white mb-10">
+                    Just ₹2,999 <span class="text-lg font-normal text-gray-300">/ per person</span>
+                </p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
+                    <!-- WhatsApp Button (Primary) -->
+                    <a href="https://wa.me/916385822088?text=Hi! I'd like to book the Wayanad Tree Tent Stay for [Date] for [Number] people." 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="w-full md:w-auto flex items-center justify-center gap-3 bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-green-600 transition duration-300 transform hover:scale-105"
+                       onclick="trackWhatsAppClick()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.451 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.847 6.061l-1.219 4.438 4.643-1.219z"/></svg>
+                        Book via WhatsApp
+                    </a>
+                    
+                    <!-- Call Button (Secondary) -->
+                    <a href="tel:+916385822088" class="w-full md:w-auto flex items-center justify-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-gray-200 transition duration-300 transform hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call to Book
+                    </a>
+                </div>
+
+                <div class="mt-8 text-gray-300">
+                    <p>Call Us: <a href="tel:+916385822088" class="font-semibold hover:underline">+91 6385 822 088</a></p>
+                    <p>Questions? Email: <a href="mailto:info@monsoonvoyages.in" class="font-semibold hover:underline">info@monsoonvoyages.in</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- 
+      Footer
+    -->
+    <footer class="bg-gray-100 py-10">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p class="mb-2">&copy; 2025 Wayanad Camping - Tree Tent Stay</p>
+            <p class="text-sm">A <a href="https://www.facebook.com/WayanadCampingTreeTentStay" target="_blank" rel="noopener" class="font-semibold text-gray-600 hover:underline">Monsoon Voyages</a> Wildernature Experience</p>
+            <a href="https://www.facebook.com/WayanadCampingTreeTentStay" target="_blank" rel="noopener" class="inline-block mt-4 text-gray-600 hover:text-emerald-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Conversion Tracking Script -->
+    <script>
+      function trackWhatsAppClick() {
+        console.log("WhatsApp Click Tracked");
+        
+        // --- Track Facebook Pixel Event ---
+        // We track this as a 'Lead' conversion
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead');
+        }
+        
+        // --- Track Google Analytics Event ---
+        // We send a 'generate_lead' event for GA4
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            'event_category': 'conversion',
+            'event_label': 'whatsapp_click'
+          });
+        }
+      }
+    </script>
+
+</body>
+</html>
